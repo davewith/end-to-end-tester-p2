@@ -13,6 +13,7 @@ packages = [
 python = "~3.10"
 modelw-preset-django = {extras = ["wagtail", "gunicorn"], version = "~2023.3.0"}
 drf-spectacular = {extras = ["sidecar"], version = "^0.26.1"}
+redis = "^4.5.4"
 
 [tool.poetry.dev-dependencies]
 black = "*"
