@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "end_to_end_tester"
+version = "0.1.0"
+description = ""
+authors = ["Dave <david.oneill@with-madrid.com>"]
+license = "Proprietary"
+
+packages = [
+    {include = "end_to_end_tester"},
+]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+modelw-preset-django = {extras = ["wagtail", "gunicorn"], version = "~2023.3.0"}
+drf-spectacular = {extras = ["sidecar"], version = "^0.26.1"}
+
+[tool.poetry.dev-dependencies]
+black = "*"
+isort = "*"
+ipython = "*"
+
+[tool.isort]
+profile = "black"
+known_first_party = "end_to_end_tester"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
