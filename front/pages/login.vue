@@ -51,17 +51,22 @@ export default {
                     email: this.email,
                     password: this.password,
                 });
-                this.$refs.messageComponent.showMessage(
-                    "Log in successful!",
-                    "success"
-                );
-                console.log(response);
+                if (response.data.is_authenticated) {
+                    this.$refs.messageComponent.showMessage(
+                        "Log in successful!",
+                        "success"
+                    );
+                } else {
+                    this.$refs.messageComponent.showMessage(
+                        "Log in failed. Please try again.",
+                        "error"
+                    );
+                }
             } catch (error) {
                 this.$refs.messageComponent.showMessage(
                     "Log in failed. Please try again.",
                     "error"
                 );
-                console.log(error.response.data);
             }
         },
     },
