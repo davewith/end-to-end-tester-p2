@@ -75,3 +75,17 @@ with EnvManager(ModelWDjango()) as env:
     WAGTAIL_SITE_NAME = "End To End Tester"
     WAGTAILIMAGES_IMAGE_MODEL = "cms.CustomImage"
     WAGTAILDOCS_DOCUMENT_MODEL = "cms.CustomDocument"
+
+    # ---
+    # S3 for local development
+    # Overwrite AWS URLs with local S3 and use HTTP
+    # ---
+    if env.get("STORAGES", None) == "local":
+        # Upload S3 URL inc scheme eg. "http://localhost:9099"
+        AWS_S3_ENDPOINT_URL = env.get("AWS_S3_ENDPOINT_URL")
+
+        # Download bucket URL excluding scheme eg. "localhost:9099/mybucket"
+        AWS_S3_CUSTOM_DOMAIN = env.get("AWS_S3_CUSTOM_DOMAIN")
+
+        # Download URL scheme eg. "http:"
+        AWS_S3_URL_PROTOCOL = env.get("AWS_S3_URL_PROTOCOL")
