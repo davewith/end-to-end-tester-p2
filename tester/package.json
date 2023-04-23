@@ -1,0 +1,25 @@
+{
+    "name": "cucumber-js-browserstack",
+    "version": "0.1.0",
+    "readme": "Cucumber-JS Integration with [BrowserStack](https://www.browserstack.com)",
+    "description": "Selenium examples for Cucumber-JS and BrowserStack Automate",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/browserstack/cucumber-js-browserstack.git"
+    },
+    "scripts": {
+        "test": "cucumber-js features/us1.feature",
+        "bs-test": "browserstack-node-sdk cucumber-js features/us1.feature",
+        "postinstall": "npm update browserstack-node-sdk"
+    },
+    "devDependencies": {
+        "@cucumber/cucumber": "^7.3.2",
+        "assert": "^2.0.0",
+        "browserstack-node-sdk": "latest"
+    },
+    "dependencies": {
+        "browserstack-local": "^1.0.0",
+        "cross-env": "^5.2.0",
+        "selenium-webdriver": "4.1.2"
+    }
+}
