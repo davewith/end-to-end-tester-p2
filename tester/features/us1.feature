@@ -10,5 +10,5 @@ Feature: Login functionality
       | email           | password  | message    |
       |                 |           | Empty      |
       | emailN          | passwordN | Failed     |
-      | good@test.com   | passwordY | Successful |
-      | bad@test.com    | passwordY | Failed     |      
+      | good@user.com   | correct   | Successful |
+      | bad@user.com    | passwordY | Failed     |      
