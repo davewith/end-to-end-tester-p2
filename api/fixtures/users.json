@@ -1,0 +1,19 @@
+[
+    {
+        "model": "people.user",
+        "pk": "f64928ea-b86e-4299-8e05-b2bd1d4068ae",
+        "fields": {
+            "password": "correct",
+            "last_login": null,
+            "is_superuser": false,
+            "first_name": "Good",
+            "last_name": "User",
+            "email": "good@user.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-04-23T12:11:14.070",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]
