@@ -89,3 +89,11 @@ with EnvManager(ModelWDjango()) as env:
 
         # Download URL scheme eg. "http:"
         AWS_S3_URL_PROTOCOL = env.get("AWS_S3_URL_PROTOCOL")
+
+    AUTHENTICATION_BACKENDS = [
+        "end_to_end_tester.apps.people.authentication.EmailBackend"
+    ]
+
+    DEFAULT_AUTHENTICATION_CLASSES = [
+        "rest_framework.authentication.BasicAuthentication",
+    ]
