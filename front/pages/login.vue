@@ -73,12 +73,25 @@ export default {
 };
 </script>
 
+<style lang="scss">
+html,
+body,
+#__nuxt,
+#__layout {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+</style>
+
 <style lang="scss" scoped>
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     font-family: "Roboto", sans-serif;
     letter-spacing: 0.1em;
     font-weight: 600;
@@ -88,7 +101,7 @@ export default {
 }
 
 form {
-    width: 300px;
+    max-width: 300px;
     padding: 4rem;
     background: linear-gradient(45deg, #9ee1bd, #d1c6ee);
     border-radius: 2rem;
