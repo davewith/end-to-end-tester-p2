@@ -10,10 +10,13 @@
     "scripts": {
         "test": "cucumber-js features/us1.feature",
         "bs-test": "browserstack-node-sdk cucumber-js features/us1.feature",
+        "percy": "percy exec -- npm test",
         "postinstall": "npm update browserstack-node-sdk"
     },
     "devDependencies": {
         "@cucumber/cucumber": "^7.3.2",
+        "@percy/cli": "^1.24.0",
+        "@percy/selenium-webdriver": "^1.0.2",
         "assert": "^2.0.0",
         "browserstack-node-sdk": "latest"
     },
