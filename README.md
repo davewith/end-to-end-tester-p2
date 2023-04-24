@@ -85,3 +85,25 @@ Imagine I break the CSS trying to change from 100vh to 100% to fix the Firefox
 issue. Immediately, I can see what's happened:
 ![Percy run 2](readme_images/percy002.png) Obviously this is an extreme example,
 but even subtle changes such as the margin changing slightly show up.
+
+## Purpose
+
+### Nuxt 2 -> 3 regression testing
+
+This tool will come into its own with the jump from Nuxt 2 to Nuxt 3. This can
+make sure there's no visual differences between before and after.
+
+### Making big changes in your code
+
+Refactoring a component or changing some infrastructure? Use this to make sure
+you've not introduced unwanted style changes somewhere.
+
+### Fixing bugs in CSS
+
+When fixing for one browser, it's easy to break another. This tool negates that
+risk somewhat.
+
+## Tips
+
+Don't feel you have to run these all the time. You will know how often to run.
+Project milestones or big code changes, rather than after every small change.
